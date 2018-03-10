@@ -52,7 +52,14 @@ $(document).ready(function() {
 			$total_project = $rowcp['total_project'];
 		?>
 		<li data-toggle="collapse" data-target="#service" class="collapsed">
-			<a href="#"><i class="fa fa-bar-chart fa-lg"></i> My Projects (<?=$total_project; ?>) <span class="arrow"></span></a> <a href="#"><span class="fa fa-plus"></span></a>
+			<a href="#">
+				<i class="fa fa-bar-chart fa-lg"></i> My Projects (<?=$total_project; ?>) <span class="arrow"></span>
+			</a> 
+			
+			<a target="_blank" href="#" data-toggle="modal" data-target="#addProject" id="test">
+				<span class="fa fa-plus"></span>
+			</a>
+			
 		</li>
 		<ul class="sub-menu collapse in snav" id="service">
 			<?php 
@@ -113,6 +120,39 @@ $(document).ready(function() {
 </div>
 
 <!-- Modals -->
+	
+	<!-- Add Project -->
+	<!-- Add Label -->
+	<div class="modal" id="addProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <form action="addProject.php" method="POST">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Add New Project</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="form-group">
+			  
+			  <input type="text" class="form-control" placeholder="Name the Project" name="project">
+			  <input type="hidden" name="network_code" value="<?php echo "{$_SESSION['network_code']}"; ?>">
+			  <input type="hidden" name="project_owner" value="<?php echo "{$_SESSION['usr_sS']}"; ?>">
+			
+			</div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="submit" name="submit" class="btn btn-primary">Save</button>
+		  </div>
+		</form>
+		</div>
+	  </div>
+	</div>
+
+	
+	
+	
+	
 	<!-- Add Task -->
 	<div class="modal" id="addTask" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
