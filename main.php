@@ -106,10 +106,31 @@ $(document).ready(function() {
 	</div>
 	
 	<div class="row">
-		<div class="col-md-5" class="collapse in">
-			<input type="checkbox" />
+		<div class="col-sm-2">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<input type="checkbox" aria-label="Checkbox for following text input" /> 
+				</span>	
+			
+				<span class="input-group-addon">
+					<ul class="nav navbar-nav navbar-left">
+					  <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span class="text-black">Actions<i class="fa fa-sitemap text-white fa-lg"></i> <b class="caret"></b> </span>
+						</a>
+						<ul class="dropdown-menu">
+						  <li>Networks </li>
+						  <li><a href="network_change.php?rel=<?=$network_code_ref; ?>" id="btn-network">Test</a></li>
+						</ul>
+					  </li>
+					</ul>
+				</span>
+				<input type='hidden' />
+			</div>
+			
 		</div>
-		<div class="col-md-4" class="collapse in">
+		
+		<div class="col-lg-4">
 			<button type="button" class="btn btn-secondary" align='right' onclick="$('div#task').load('task.php?uid=<?=$_SESSION['usr_sS']; ?>'); $('div#content').empty();$('div#calendar').empty();"><i class="fa fa-list-ul"></i>&nbsp;List</button>
 			<button type="button" class="btn btn-secondary" align='right' onclick="$('div#calendar').load('calendar.php'); $('div#content').empty();$('div#task').empty();"><i class="fa fa-calendar"></i>&nbsp;Calendar</button>
 			<button type="button" class="btn btn-secondary" align='right'><i class="fa fa-line-chart"></i>&nbsp;Activitie</button>
