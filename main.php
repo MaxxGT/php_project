@@ -116,18 +116,25 @@ $(document).ready(function() {
 					<ul class="nav navbar-nav navbar-left">
 					  <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<span class="text-black">Actions<i class="fa fa-sitemap text-white fa-lg"></i> <b class="caret"></b> </span>
+							<span class="text-black">Actions <b class="caret"></b> </span>
 						</a>
 						<ul class="dropdown-menu">
-						  <li>Networks </li>
-						  <li><a href="network_change.php?rel=<?=$network_code_ref; ?>" id="btn-network">Test</a></li>
+						  <li>Select </li>
+						  <li class="divider"></li>
+							<li>Manual</li>
+							<li>All</li>
+							<li>None</li>
+							<li>Done</li>
+							<li>Not Done</li>
+							<li>Starred</li>
+							<li>Unstarred</li>
+							<li>Unscheduled</li>
 						</ul>
 					  </li>
 					</ul>
 				</span>
 				<input type='hidden' />
 			</div>
-			
 		</div>
 		
 		<div class="col-lg-4">
