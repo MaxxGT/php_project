@@ -104,6 +104,18 @@ $(document).ready(function() {
 		<BR><BR><BR><BR>
 		</div>
 	</div>
+	
+	<div class="row">
+		<div class="col-md-5" class="collapse in">
+			<input type="checkbox" />
+		</div>
+		<div class="col-md-4" class="collapse in">
+			<button type="button" class="btn btn-secondary" align='right' onclick="$('div#task').load('task.php?uid=<?=$_SESSION['usr_sS']; ?>'); $('div#content').empty();$('div#calendar').empty();"><i class="fa fa-list-ul"></i>&nbsp;List</button>
+			<button type="button" class="btn btn-secondary" align='right' onclick="$('div#calendar').load('calendar.php'); $('div#content').empty();$('div#task').empty();"><i class="fa fa-calendar"></i>&nbsp;Calendar</button>
+			<button type="button" class="btn btn-secondary" align='right'><i class="fa fa-line-chart"></i>&nbsp;Activitie</button>
+		</div>
+	</div>
+	
     <div class="row">
         <div class="col-md-6" class="collapse in">
 			<a href="#" data-toggle="modal" data-target="#addTask" id="test">
@@ -112,7 +124,9 @@ $(document).ready(function() {
 		</div>
 	</div>
     <div class="row">
-        <div id="task" class="col-md-7"> 
+		<div id="task" class="col-md-7"> 
+        </div>
+		<div id="calendar" class="col-md-7"> 
         </div>
         <div id="content" class="col-md-5">
         </div>
