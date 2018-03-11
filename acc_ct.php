@@ -13,7 +13,4 @@ if($_SESSION['sys_Code']!='ACMTASK') {
 }
 
 //$_SESSION['site_usr']
-
-
-
 ?>

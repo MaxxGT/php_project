@@ -11,15 +11,14 @@ $sqls = "Select * FROM usr_user WHERE usr_name = '$logged_in_usr'";
 $rss = @mysqli_query($dbh,$sqls);
 $rows = @mysqli_fetch_array($rss);
 
-	$emp_first_name = $rows['emp_first_name'];	
+$emp_first_name = $rows['emp_first_name'];	
 
 //Network
 $sqlnwc = "Select network_short_name FROM network WHERE network_code = '$network_code' ";
 $rsnwc = @mysqli_query($dbh,$sqlnwc);
 $rownwc = @mysqli_fetch_array($rsnwc);
 
-	$network_short_name = $rownwc['network_short_name'];
-	
+$network_short_name = $rownwc['network_short_name'];	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,6 +112,7 @@ $rownwc = @mysqli_fetch_array($rsnwc);
           <input type="text" class="form-control" placeholder="Name the Network" name="network">
 		  <input type="hidden" name="network_userCreate" value="<?php echo "{$_SESSION['u_username']}"; ?>">
 		  <input type="hidden" name="network_username" value="<?php echo "{$_SESSION['u_username']}"; ?>">
+		  <input type="hidden" name="network_admin" value="<?php echo "{$_SESSION['usr_sS']}"; ?>">
         </div>
       </div>
       <div class="modal-footer">
