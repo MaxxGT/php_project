@@ -109,7 +109,9 @@ $network_short_name = $rownwc['network_short_name'];
       <div class="modal-body">
         <div class="form-group">
           <label>Start a new network</label>
-          <input type="text" class="form-control" placeholder="Name the Network" name="network">
+          <input type="text" class="form-control" placeholder="Network Name" name="network">
+          <input type="text" class="form-control" placeholder="Network Short Name" name="network_short_name">
+		  
 		  <input type="hidden" name="network_userCreate" value="<?php echo "{$_SESSION['u_username']}"; ?>">
 		  <input type="hidden" name="network_username" value="<?php echo "{$_SESSION['u_username']}"; ?>">
 		  <input type="hidden" name="network_admin" value="<?php echo "{$_SESSION['usr_sS']}"; ?>">
